@@ -14,27 +14,13 @@ Interest point matching:
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/matched_points.png" height="200" />
 
 **Effects of sigma and ratio:**
-- Sigma is the threshold for corner detection using FAST feature detector. The greater sigma is, the more different the pixel intensities of a corner point and its surrounding points have to be, and thus the fewer corner points are.
-- Ratio is the maximum ratio of distances between first and second closest descriptor in the second set of descriptors. This threshold is useful to filter ambiguous matches between the two descriptor sets. (Source: [scikit.image documentation](https://scikit-image.org/docs/0.15.x/api/skimage.feature.html#skimage.feature.match_descriptors)) The greater the ratio, the more tolerant the matching process, and the more matched pairs/lines.
+Sigma is the threshold for corner detection using FAST feature detector. The greater sigma is, the more different the pixel intensities of a corner point and its surrounding points have to be, and thus the fewer corner points are.
+Ratio is the maximum ratio of distances between first and second closest descriptor in the second set of descriptors. This threshold is useful to filter ambiguous matches between the two descriptor sets. (Source: [scikit.image documentation](https://scikit-image.org/docs/0.15.x/api/skimage.feature.html#skimage.feature.match_descriptors)) The greater the ratio, the more tolerant the matching process, and the more matched pairs/lines.
 
 **Difference between Harris and FAST:**
-- BRIEF descriptor is a binary descriptor. It randomly extracts pixels surrounding the feature point and compare their grey-scale values p and q (p > q → 1, otherwise 0). Then we get a 256-bit binary string containing information of 256 sets of comparison. Therefore, BRIEF is fast and efficient for storage and matching purposes. It can be combined with FAST to perform rapid feature extraction and description.
+BRIEF descriptor is a binary descriptor. It randomly extracts pixels surrounding the feature point and compare their grey-scale values p and q (p > q → 1, otherwise 0). Then we get a 256-bit binary string containing information of 256 sets of comparison. Therefore, BRIEF is fast and efficient for storage and matching purposes. It can be combined with FAST to perform rapid feature extraction and description.
 
-**How Hamming distance & BRIEF work in interest point matching:**
-    
-Hamming distance between two binary strings is the number of different values at each index position. For example:
-
-$$
-x_1 = \begin{bmatrix}
-0&1&1&0&1&0&1&0
-\end{bmatrix}\\x_2 = \begin{bmatrix}
-1&1&1&0&1&0&0&0
-\end{bmatrix}
-$$
-
-Two numbers (at index 0 and 6) are different, so $Hamming\ distance(x_1, x_2) = 2$. 
-
-Hamming distance can be used to match interest points by choosing the nearest neighbor from another image. The smaller the Hamming distance, the more two points should be matched as a pair. Since BRIEF descriptor returns binary strings, Hamming distance is perfect for it.
-    
 **Benefits of Hamming over Euclidean:**
 For binary vectors, the squares in Euclidean distance are either 0 or 1. Therefore, the sum of those squares is simply the count of differing entries, which is the Hamming distance. Given that these two distances function basically the same in the BRIEF setting, Hamming distance is more computationally efficient than Euclidean.
+
+
