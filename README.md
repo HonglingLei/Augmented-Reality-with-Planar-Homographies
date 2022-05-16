@@ -1,5 +1,7 @@
 # Augmented Reality with Planar Homographies
 In this project, I conducted real-time image and video AR projections through interest point matching and homography estimation. The first step was to find point correspondences with the FAST detector and BRIEF descriptor. Then I estimated homography between the images using the eight-point algorithm. With the computed homography, I'd be able to warp/project an image to the targeted location. 
+Since this is a class assignment, my code is not published on GitHub.
+
 
 ## Image warping
 My code was tested with the following example. A homography was computed between the Computer Vision textbook cover (grey template) and the actual textbook on the table. Below is the matched interest points between the template and target images.
@@ -38,6 +40,7 @@ Projected result:
 - **Benefits of Hamming distance over Euclidean distance:**
   - For binary vectors, the squares in Euclidean distance are either 0 or 1. Therefore, the sum of those squares is simply the count of differing entries, which is the Hamming distance. Given that these two distances function basically the same in the BRIEF setting, Hamming distance is more computationally efficient than Euclidean.
 
+
 ## Video AR
 Now that the single-image AR worked well, I took a step further to implement AR in videos. More specifically, I tracked the Computer Vision text book in each frame of the `book.gif` video, and overlaied each frame of `ar_source.gif` onto the book in `book.gif`. 
 
@@ -54,6 +57,7 @@ Projected result `ar.gif`:
 ![book](https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/ar.gif)
 
 This AR application only incorporated the translation of oobjects (Since BRIEF is not rotation-invariant). To account for the rotation of objects, scaling, etc., we would need a better point representation like ORB.
+
 
 ## Make a Simple Panorama
 Planar homographies can also be used to create panorama images. I used my program to stitch the following two photos of the Niagara Falls together.
