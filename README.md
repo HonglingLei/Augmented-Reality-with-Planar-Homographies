@@ -3,7 +3,7 @@ In this project, I conducted real-time image and video AR projections through in
 Since this is a class assignment, my code is not published on GitHub.
 
 
-## Image warping
+## Image Warping
 My code was tested with the following example. A homography was computed between the Computer Vision textbook cover (grey template) and the actual textbook on the table. Below is the matched interest points between the template and target images.
 
 Computer Vision textbook cover:  
