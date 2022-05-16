@@ -44,6 +44,20 @@ Content video `ar_source.gif`:
 
 ![book](https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/ar_source.gif)
 
-Projected video `ar.gif`:
+Projected result `ar.gif`:
 
 ![book](https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/ar.gif)
+
+This AR application only incorporated the translation of oobjects (Since BRIEF is not rotation-invariant). To account for the rotation of objects, scaling, etc., we would need a better point representation like ORB.
+
+## Make a Simple Panorama
+Planar homographies can also be used to create panorama images. I used my program to stitch the following two photos of the Niagara Falls together.
+
+Photo 1:  
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/pano_left.jpg" height="200" /> 
+
+Photo 2: 
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/pano_right.jpg" height="200" /> 
+
+Panorama:
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/panorama.png" height="200" /> 
