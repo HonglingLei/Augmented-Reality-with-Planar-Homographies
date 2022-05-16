@@ -33,4 +33,5 @@ Projected result:
 - **Benefits of Hamming distance over Euclidean distance:**
   - For binary vectors, the squares in Euclidean distance are either 0 or 1. Therefore, the sum of those squares is simply the count of differing entries, which is the Hamming distance. Given that these two distances function basically the same in the BRIEF setting, Hamming distance is more computationally efficient than Euclidean.
 
-
+## Video AR
+Now that the single-image AR worked well, I took a step further to implement AR in videos. More specifically, I tracked the Computer Vision text book in each frame of the `book.mov` video, and overlaied each frame of `ar_source.mov` onto the book in `book.mov`. 
