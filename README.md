@@ -32,7 +32,7 @@ Projected result:
 
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_desk.png" height="200" />
 
-### Some conceptual tips
+### Conceptual Tips
 - **Effects of sigma and ratio:**
   - Sigma is the threshold for corner detection using FAST feature detector. The greater sigma is, the more different the pixel intensities of a corner point and its surrounding points have to be, and thus the fewer corner points are.
   - Ratio is the maximum ratio of distances between first and second closest descriptor in the second set of descriptors. This threshold is useful to filter ambiguous matches between the two descriptor sets. (Source: [scikit.image documentation](https://scikit-image.org/docs/0.15.x/api/skimage.feature.html#skimage.feature.match_descriptors)) The greater the ratio, the more tolerant the matching process, and the more matched pairs/lines.
