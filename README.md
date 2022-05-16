@@ -5,20 +5,25 @@ In this project, I conducted real-time image and video AR projections through in
 My code was tested with the following example. A homography was computed between the Computer Vision textbook cover (grey template) and the actual textbook on the table. Below is the matched interest points between the template and target images.
 
 Computer Vision textbook cover:  
+
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/cv_cover.jpg" height="200" />
 
 Textbook on the table:  
+
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/cv_desk.png" height="200" /> 
 
 Interest point matching:  
+
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/matched_points.png" height="200" />
 
 With the estimated homography, we can warp another book cover (e.g. Harry Potter book) to overlay the textbook on the table.
 
 Harry Potter cover:  
+
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_cover.jpg" height="200" />
 
 Projected result:  
+
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_desk.png" height="200" />
 
 ### Some conceptual tips
@@ -54,10 +59,13 @@ This AR application only incorporated the translation of oobjects (Since BRIEF i
 Planar homographies can also be used to create panorama images. I used my program to stitch the following two photos of the Niagara Falls together.
 
 Photo 1:  
-<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/pano_left.jpg" height="200" /> 
+
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/pano_left.jpg" height="300" /> 
 
 Photo 2: 
-<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/pano_right.jpg" height="200" /> 
 
-Panorama:
-<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/panorama.png" height="200" /> 
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/pano_right.jpg" height="300" /> 
+
+Generated panorama:
+
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/panorama.png" height="300" /> 
