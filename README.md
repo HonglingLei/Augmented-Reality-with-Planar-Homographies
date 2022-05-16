@@ -35,4 +35,4 @@ Harry Potter cover:
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_cover.jpg" height="200" />
 
 Projected result:  
-<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_desk.jpg" height="200" />
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_desk.png" height="200" />
