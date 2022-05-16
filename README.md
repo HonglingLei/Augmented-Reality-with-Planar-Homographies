@@ -24,6 +24,10 @@ Harry Potter cover:
 
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_cover.jpg" height="200" />
 
+Textbook on the table:  
+
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/cv_desk.png" height="200" /> 
+
 Projected result:  
 
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_desk.png" height="200" />
