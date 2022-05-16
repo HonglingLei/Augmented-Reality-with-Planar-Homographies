@@ -37,7 +37,5 @@ Projected result:
 Now that the single-image AR worked well, I took a step further to implement AR in videos. More specifically, I tracked the Computer Vision text book in each frame of the `book.mov` video, and overlaied each frame of `ar_source.mov` onto the book in `book.mov`. 
 
 Background video `book.mov`:
-![book.mov](https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/book.mp4)
-https://user-images.githubusercontent.com/47043780/168505878-cbc2d1ad-1918-41fb-bba7-f7ab23b31675.mp4
 
-
+[![book.mov](https://res.cloudinary.com/marcomontalbano/image/upload/v1652665907/video_to_markdown/images/youtube--QXw8RYuNsRI-c05b58ac6eb4c4700831b2b3070cd403.jpg)]( https://youtu.be/QXw8RYuNsRI "book.mov")
