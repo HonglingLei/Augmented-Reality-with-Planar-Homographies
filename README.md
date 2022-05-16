@@ -37,4 +37,4 @@ Projected result:
 Now that the single-image AR worked well, I took a step further to implement AR in videos. More specifically, I tracked the Computer Vision text book in each frame of the `book.mov` video, and overlaied each frame of `ar_source.mov` onto the book in `book.mov`. 
 
 Background video `book.mov`:
-https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/issues/1
+https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/issues/1#issue-1236518181)
