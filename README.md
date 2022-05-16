@@ -14,13 +14,25 @@ Interest point matching:
 <img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/matched_points.png" height="200" />
 
 **Effects of sigma and ratio:**
+
 Sigma is the threshold for corner detection using FAST feature detector. The greater sigma is, the more different the pixel intensities of a corner point and its surrounding points have to be, and thus the fewer corner points are.
+
 Ratio is the maximum ratio of distances between first and second closest descriptor in the second set of descriptors. This threshold is useful to filter ambiguous matches between the two descriptor sets. (Source: [scikit.image documentation](https://scikit-image.org/docs/0.15.x/api/skimage.feature.html#skimage.feature.match_descriptors)) The greater the ratio, the more tolerant the matching process, and the more matched pairs/lines.
 
 **Difference between Harris and FAST:**
-BRIEF descriptor is a binary descriptor. It randomly extracts pixels surrounding the feature point and compare their grey-scale values p and q (p > q → 1, otherwise 0). Then we get a 256-bit binary string containing information of 256 sets of comparison. Therefore, BRIEF is fast and efficient for storage and matching purposes. It can be combined with FAST to perform rapid feature extraction and description.
 
-**Benefits of Hamming over Euclidean:**
+BRIEF descriptor is a binary descriptor. It randomly extracts pixels surrounding the feature point and compare their grey-scale values p and q (p > q → 1, otherwise 0). Then we get a 256-bit binary string containing information of 256 sets of comparison. Therefore, BRIEF is fast and efficient for storage and matching purposes. It can be combined with FAST to perform rapid feature extraction and description. However, BRIEF is not rotation-invariant. When the picture is rotated, the randomly selected surrounding points are different, and thus the binary vector we get is different. Plus, Hamming distance is only comparing the values at the same index so it will increase accordingly. Therefore, points will match poorly when a picture is too tilted.
+
+FAST is more computationally efficient than Harris because it can exclude lots of non- corners by examining only four surrounding pixels (position 1, 5, 9, 13). In contrast, Harris is slow and computationally demanding because of the gradient calculation.
+
+**Benefits of Hamming distance over Euclidean distance:**
+
 For binary vectors, the squares in Euclidean distance are either 0 or 1. Therefore, the sum of those squares is simply the count of differing entries, which is the Hamming distance. Given that these two distances function basically the same in the BRIEF setting, Hamming distance is more computationally efficient than Euclidean.
 
+With estimated homography, we can warp another book cover (e.g. Harry Potter book) to overlay the textbook on the table.
 
+Harry Potter cover:  
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_cover.jpg" height="200" />
+
+Projected result:  
+<img src="https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/hp_desk.jpg" height="200" />
