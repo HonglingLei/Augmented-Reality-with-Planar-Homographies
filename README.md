@@ -60,7 +60,7 @@ Projected result `ar.gif`:
 
 ![book](https://github.com/HonglingLei/Augmented-Reality-with-Planar-Homographies/blob/main/data/ar.gif)
 
-This AR application only incorporated the translation of oobjects (Since BRIEF is not rotation-invariant). To account for the rotation of objects, scaling, etc., we would need a better point representation like ORB.
+This AR application only incorporated the translation of objects (Since BRIEF is not rotation-invariant). To account for the rotation of objects, scaling, etc., we would need a better point representation like ORB.
 
 
 ## Make a Simple Panorama
